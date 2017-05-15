@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Homepage" translatesAutoresizingMaskIntoConstraints="NO" id="DwV-wT-qYD">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Homepage" translatesAutoresizingMaskIntoConstraints="NO" id="DwV-wT-qYD">
+                                <rect key="frame" x="-4" y="-3" width="383" height="674"/>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-2Z-aXd" customClass="GIDSignInButton">
                                 <rect key="frame" x="67" y="302" width="240" height="63"/>
@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-801" y="132"/>
+            <point key="canvasLocation" x="-802.39999999999998" y="131.78410794602701"/>
         </scene>
         <!--home-->
         <scene sceneID="DtY-dP-yT5">
@@ -252,7 +252,10 @@
         <!--PageVC-->
         <scene sceneID="RYV-ZP-xfQ">
             <objects>
-                <pageViewController restorationIdentifier="PageVC" storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Wv0-WI-dMO" customClass="PageVC" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController restorationIdentifier="PageVC" storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Wv0-WI-dMO" customClass="PageVC" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zb-rx-Q1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1249" y="132"/>
@@ -268,6 +271,31 @@
                     <view key="view" contentMode="scaleToFill" id="Pnt-Lr-yyu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-j9-sua">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="book-simple-7" id="U7D-rl-fOh">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Wv0-WI-dMO" kind="show" id="xLH-fM-GH0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4zg-e5-GcR"/>
+                                    <barButtonItem image="house-7" id="vVR-W4-vGg">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="aTP-DB-QyU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oUK-Qm-UdJ"/>
+                                    <barButtonItem image="Info" id="DE6-Vz-Gz2">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -382,16 +410,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYf-Y1-xqr">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Map" image="paper-map-7" id="GM8-Dh-4kq"/>
-                                    <tabBarItem title="Home" image="house-7" id="JdM-ch-Q1A"/>
-                                    <tabBarItem title="Info" image="Info" id="KlZ-3a-wll"/>
-                                </items>
-                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt3-U5-uNI">
                                 <rect key="frame" x="306" y="25" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -403,6 +421,29 @@
                                     <action selector="submitButton:" destination="R2W-U4-Lgg" eventType="touchUpInside" id="ncQ-Ke-cO0"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-hy-xOj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="paper-map-7" id="Jfs-8c-hXm">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="rCg-lI-wPI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GeM-lq-Bej"/>
+                                    <barButtonItem image="house-7" id="1M3-wu-IX1">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="Jw8-0I-Pvb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bpt-Vq-j2M"/>
+                                    <barButtonItem image="Info" id="dWg-DH-ahK">
+                                        <color key="tintColor" red="0.57250362634658813" green="0.5725746750831604" blue="0.5724794864654541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -521,22 +562,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9x-2i-5Vi">
-                                <rect key="frame" x="-26" y="8" width="175" height="42"/>
+                                <rect key="frame" x="-26" y="11" width="175" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-z9-nhx">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Map" image="paper-map-7" id="IWS-hF-POd"/>
-                                    <tabBarItem title="Home" image="house-7" id="d8Y-N9-CrQ"/>
-                                    <tabBarItem title="Info" image="Info" id="XL7-qi-RQP"/>
-                                </items>
-                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gns-oe-ZaN">
                                 <rect key="frame" x="306" y="28" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -548,6 +579,29 @@
                                     <action selector="submitButton:" destination="S7R-CX-ChR" eventType="touchUpInside" id="AB5-U3-GQK"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opA-P1-NJi">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="paper-map-7" id="unP-c0-gpE">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="GsB-uR-uSX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1za-6i-o0P"/>
+                                    <barButtonItem image="house-7" id="Hcp-Gl-FIB">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="ndW-m0-NXt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QP2-C4-Gts"/>
+                                    <barButtonItem image="Info" id="uDf-Lw-LrO">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -670,16 +724,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stA-GU-Ib2">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Map" image="paper-map-7" id="a4A-vn-PwU"/>
-                                    <tabBarItem title="Home" image="house-7" id="hqj-yP-5sP"/>
-                                    <tabBarItem title="Info" image="Info" id="XKB-PZ-Lr1"/>
-                                </items>
-                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmY-LY-M1P">
                                 <rect key="frame" x="306" y="28" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -691,6 +735,29 @@
                                     <action selector="submitButton:" destination="rd3-ZQ-8te" eventType="touchUpInside" id="neu-eM-1qP"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulK-5X-CGe">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="paper-map-7" id="BxT-na-4eZ">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="qFm-8K-dlp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bmF-3a-VFo"/>
+                                    <barButtonItem image="house-7" id="05w-mq-RlT">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="oqo-Gy-vqd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2e5-HV-1F3"/>
+                                    <barButtonItem image="Info" id="5XT-9P-dDk">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -813,16 +880,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9z-zD-P1m">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Map" image="paper-map-7" id="LTC-os-59p"/>
-                                    <tabBarItem title="Home" image="house-7" id="V45-vg-SW3"/>
-                                    <tabBarItem title="Info" image="Info" id="rtd-NY-sR5"/>
-                                </items>
-                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK8-CN-HMB">
                                 <rect key="frame" x="306" y="28" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -834,6 +891,29 @@
                                     <action selector="submitButton:" destination="gH1-VS-71f" eventType="touchUpInside" id="42u-3j-d3x"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-f8-Uf5">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="paper-map-7" id="1CV-QR-2EG">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="tKi-bq-jHg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sTQ-gW-1Fd"/>
+                                    <barButtonItem image="house-7" id="5V5-wb-tTU">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="bsX-Vc-sN1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EXG-O4-QmZ"/>
+                                    <barButtonItem image="Info" id="bkS-bl-T0t">
+                                        <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -854,7 +934,13 @@
         <image name="Background 3" width="2331" height="3303"/>
         <image name="Homepage" width="2408" height="3453"/>
         <image name="Info" width="25" height="25"/>
+        <image name="book-simple-7" width="29" height="30"/>
         <image name="house-7" width="30" height="30"/>
         <image name="paper-map-7" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xLH-fM-GH0"/>
+        <segue reference="GsB-uR-uSX"/>
+        <segue reference="ndW-m0-NXt"/>
+    </inferredMetricsTieBreakers>
 </document>
