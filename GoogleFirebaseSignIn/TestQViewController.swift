@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class TestQViewController: UIViewController {
     
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate

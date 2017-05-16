@@ -18,6 +18,7 @@ class Page4ViewController: UIViewController {
     @IBOutlet weak var Question5TextField: UITextField!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var integer = 0
     var page1Array: [String] = []
     var page2Array: [String] = []
     var page3Array: [String] = []
@@ -25,11 +26,15 @@ class Page4ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        page1Array = appDelegate.page1Questions
-        page2Array = appDelegate.page2Questions
-        page3Array = appDelegate.page3Questions
-        page4Array = appDelegate.page4Questions
+        if(integer == 0)
+        {
+            page1Array = appDelegate.page1Questions
+            page2Array = appDelegate.page2Questions
+            page3Array = appDelegate.page3Questions
+            page4Array = appDelegate.page4Questions
+            pullAnswers()
+            integer += 1
+        }
     }
     
     func pullAnswers()
