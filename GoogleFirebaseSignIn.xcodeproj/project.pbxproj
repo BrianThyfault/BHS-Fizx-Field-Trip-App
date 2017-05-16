@@ -13,6 +13,7 @@
 		3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */; };
 		3F0B93191ECA00AC00E6A416 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B93181ECA00AC00E6A416 /* PageVC.swift */; };
 		3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F82101EB7B77B0029E734 /* UserData.swift */; };
+		3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F832A671ECB331B000DEAF2 /* HomeViewController.swift */; };
 		3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DC61E9E789300C28548 /* AppDelegate.swift */; };
 		3FD89DC91E9E789300C28548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DC81E9E789300C28548 /* ViewController.swift */; };
 		3FD89DCC1E9E789300C28548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD89DCA1E9E789300C28548 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
 		3F0B93181ECA00AC00E6A416 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		3F7F82101EB7B77B0029E734 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3F832A671ECB331B000DEAF2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FD89DC31E9E789300C28548 /* GoogleFirebaseSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleFirebaseSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD89DC61E9E789300C28548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD89DC81E9E789300C28548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3F0B93141EC5E34600E6A416 /* Page3ViewController.swift */,
 				3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */,
 				3FD89DE01EB396A600C28548 /* TestQViewController.swift */,
+				3F832A671ECB331B000DEAF2 /* HomeViewController.swift */,
 				3F0B93181ECA00AC00E6A416 /* PageVC.swift */,
 				3FD89DCD1E9E789300C28548 /* Assets.xcassets */,
 				3FD89DCF1E9E789300C28548 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 				3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */,
 				3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */,
 				3F0B93151EC5E34600E6A416 /* Page3ViewController.swift in Sources */,
+				3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */,
 				3F0B93111EC4BC7900E6A416 /* Page1ViewController.swift in Sources */,
 				3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */,
 				3FD89DE11EB396A600C28548 /* TestQViewController.swift in Sources */,
