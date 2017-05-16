@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="1249" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Olq-SQ-r8b">
             <objects>
-                <viewController id="Dw9-Q5-mRi" sceneMemberID="viewController">
+                <viewController id="Dw9-Q5-mRi" customClass="MapViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R5D-aa-njN"/>
                         <viewControllerLayoutGuide type="bottom" id="fFD-CG-lnM"/>
@@ -295,13 +295,28 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-nW-KeP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9I-E8-U0W">
+                                <rect key="frame" x="16" y="20" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Six Flags Carousel Plaza"/>
+                                <connections>
+                                    <action selector="goToSixFlags:" destination="Dw9-Q5-mRi" eventType="touchUpInside" id="b1b-vb-zrm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myMapView" destination="RRT-nW-KeP" id="c9x-2g-kgZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmy-7C-mDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="1007"/>
+            <point key="canvasLocation" x="-10.4" y="1006.1469265367317"/>
         </scene>
         <!--Page1 View Controller-->
         <scene sceneID="U88-gx-xFk">
@@ -941,6 +956,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="xLH-fM-GH0"/>
         <segue reference="GsB-uR-uSX"/>
-        <segue reference="ndW-m0-NXt"/>
+        <segue reference="aTP-DB-QyU"/>
     </inferredMetricsTieBreakers>
 </document>

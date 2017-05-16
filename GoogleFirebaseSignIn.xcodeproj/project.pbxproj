@@ -22,6 +22,7 @@
 		3FD89DD91E9FCD8600C28548 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD89DD81E9FCD8600C28548 /* GoogleService-Info.plist */; };
 		3FD89DDF1EA51DA400C28548 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD89DDE1EA51DA400C28548 /* AdSupport.framework */; };
 		3FD89DE11EB396A600C28548 /* TestQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DE01EB396A600C28548 /* TestQViewController.swift */; };
+		3FDE68101ECB52C500A81DEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE680F1ECB52C500A81DEE /* MapViewController.swift */; };
 		7C4A37348241956BA802987A /* Pods_GoogleFirebaseSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4144213BFDCE13F23ED4F7 /* Pods_GoogleFirebaseSignIn.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		3FD89DDB1E9FCF8000C28548 /* GoogleFirebaseSignIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleFirebaseSignIn-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FD89DDE1EA51DA400C28548 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3FD89DE01EB396A600C28548 /* TestQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestQViewController.swift; sourceTree = "<group>"; };
+		3FDE680F1ECB52C500A81DEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5A30BF6A64519F371A3A9237 /* Pods-GoogleFirebaseSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFirebaseSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFirebaseSignIn/Pods-GoogleFirebaseSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				3F7F82101EB7B77B0029E734 /* UserData.swift */,
 				3FD89DC81E9E789300C28548 /* ViewController.swift */,
 				3FD89DCA1E9E789300C28548 /* Main.storyboard */,
+				3FDE680F1ECB52C500A81DEE /* MapViewController.swift */,
 				3F0B93101EC4BC7900E6A416 /* Page1ViewController.swift */,
 				3F0B93121EC5E33A00E6A416 /* Page2ViewController.swift */,
 				3F0B93141EC5E34600E6A416 /* Page3ViewController.swift */,
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDE68101ECB52C500A81DEE /* MapViewController.swift in Sources */,
 				3FD89DC91E9E789300C28548 /* ViewController.swift in Sources */,
 				3F0B93191ECA00AC00E6A416 /* PageVC.swift in Sources */,
 				3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */,
