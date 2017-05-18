@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     {
         return (page1Array, page2Array, page3Array, page4Array)
     }
+    
     @IBAction func signOutButton(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
         if let nav = self.navigationController {

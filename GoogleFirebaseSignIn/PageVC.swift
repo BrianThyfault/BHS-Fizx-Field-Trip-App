@@ -16,7 +16,10 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
     return [self.VCInstant(name: "firstVC"),
             self.VCInstant(name: "secondVC"),
             self.VCInstant(name: "thirdVC"),
-            self.VCInstant(name: "fourthVC")]
+            self.VCInstant(name: "fourthVC"),
+            self.VCInstant(name: "fifthVC"),
+            self.VCInstant(name: "sixthVC"),
+            self.VCInstant(name: "seventhVC")]
     }()
     
     private func VCInstant(name: String)-> UIViewController{

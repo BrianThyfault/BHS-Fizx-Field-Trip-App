@@ -964,7 +964,7 @@
         <!--Page5 View Controller-->
         <scene sceneID="7FX-sB-lg8">
             <objects>
-                <viewController id="jn6-TB-vgP" customClass="Page5ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fifthVC" id="jn6-TB-vgP" customClass="Page5ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dok-co-7Yq"/>
                         <viewControllerLayoutGuide type="bottom" id="xWQ-bf-t15"/>
@@ -1077,6 +1077,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="gH1-VS-71f" eventType="touchUpInside" id="iG1-tc-al9"/>
+                                    <action selector="submitButton:" destination="jn6-TB-vgP" eventType="touchUpInside" id="nSc-cD-b7t"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2H-0p-ULr">
@@ -1085,10 +1086,16 @@
                                 <items>
                                     <barButtonItem image="paper-map-7" id="h83-TV-iAq">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="Zgc-XG-jhF"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HDO-cz-VTN"/>
-                                    <barButtonItem image="house-7" id="Ax7-fd-NeC">
+                                    <barButtonItem image="house-7" width="120" id="Ax7-fd-NeC">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="Q9F-pb-olG"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0h1-Ky-lYT"/>
                                     <barButtonItem image="Info" id="2z3-E6-yBy">
@@ -1099,6 +1106,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Question1TextField" destination="K8z-TW-3P1" id="8vP-ul-SOA"/>
+                        <outlet property="Question2TextField" destination="MZn-hh-XEY" id="B1x-dk-MpB"/>
+                        <outlet property="Question3TextField" destination="i58-gx-A1W" id="w0i-Af-SY7"/>
+                        <outlet property="Question4TextField" destination="alN-ac-KQR" id="GW9-HJ-DCF"/>
+                        <outlet property="Question5TextField" destination="NWV-ya-cZs" id="mXI-1i-qGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-BG-Ufj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1107,7 +1121,7 @@
         <!--Page6 View Controller-->
         <scene sceneID="mFC-Vw-2Am">
             <objects>
-                <viewController id="jdD-DY-HrX" customClass="Page6ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sixthVC" id="jdD-DY-HrX" customClass="Page6ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1by-51-oer"/>
                         <viewControllerLayoutGuide type="bottom" id="SA0-rv-ouE"/>
@@ -1219,6 +1233,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitButton:" destination="jdD-DY-HrX" eventType="touchUpInside" id="l2D-tC-nJM"/>
                                     <action selector="submitButton:" destination="gH1-VS-71f" eventType="touchUpInside" id="wsM-pG-Zhi"/>
                                 </connections>
                             </button>
@@ -1228,10 +1243,16 @@
                                 <items>
                                     <barButtonItem image="paper-map-7" id="yNJ-Qi-4YR">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="ubc-pA-AdL"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="531-pe-oD8"/>
                                     <barButtonItem image="house-7" id="dvV-sb-pl7">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="3c3-p8-6UQ"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="09b-Gb-6cK"/>
                                     <barButtonItem image="Info" id="IQH-zG-Vkr">
@@ -1242,6 +1263,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Question1TextField" destination="6fP-3i-fc0" id="0Hd-xh-kMG"/>
+                        <outlet property="Question2TextField" destination="dHt-Xv-SL0" id="bcG-fH-1f7"/>
+                        <outlet property="Question3TextField" destination="ORI-ub-xd5" id="eE5-yT-jy0"/>
+                        <outlet property="Question4TextField" destination="SC6-BI-F61" id="ZGM-SU-Iuz"/>
+                        <outlet property="Question5TextField" destination="jfv-tN-3hv" id="VZ0-s7-dgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dz2-Pi-eGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1250,7 +1278,7 @@
         <!--Page7 View Controller-->
         <scene sceneID="7MD-Pl-pjH">
             <objects>
-                <viewController id="6rb-Qw-Vta" customClass="Page7ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="seventhVC" id="6rb-Qw-Vta" customClass="Page7ViewController" customModule="GoogleFirebaseSignIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RJX-mx-qZf"/>
                         <viewControllerLayoutGuide type="bottom" id="AqU-gs-9lu"/>
@@ -1362,6 +1390,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitButton:" destination="6rb-Qw-Vta" eventType="touchUpInside" id="Aa3-Il-6Hg"/>
                                     <action selector="submitButton:" destination="gH1-VS-71f" eventType="touchUpInside" id="GmT-C2-Kct"/>
                                 </connections>
                             </button>
@@ -1371,10 +1400,16 @@
                                 <items>
                                     <barButtonItem image="paper-map-7" id="VyE-7b-8ms">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Dw9-Q5-mRi" kind="show" id="gdP-BZ-vvR"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bBt-JR-n4W"/>
                                     <barButtonItem image="house-7" id="MQj-SY-2Z1">
                                         <color key="tintColor" red="0.57250362629999996" green="0.57257467510000004" blue="0.57247948650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="egn-Rx-6ak" kind="show" id="2ej-wX-nm1"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u9D-LB-o5K"/>
                                     <barButtonItem image="Info" id="glr-m9-igK">
@@ -1385,6 +1420,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Question1TextField" destination="CPc-2X-Mam" id="yD3-rd-Bmq"/>
+                        <outlet property="Question2TextField" destination="OrU-4g-iSX" id="xvM-rC-S0A"/>
+                        <outlet property="Question3TextField" destination="ccB-VI-X6f" id="6hO-6K-HRC"/>
+                        <outlet property="Question4TextField" destination="mXj-Lm-rxK" id="V6A-7a-dIa"/>
+                        <outlet property="Question5TextField" destination="nUo-jL-Kzx" id="YmG-xY-LXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyK-Q4-3Kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1401,8 +1443,8 @@
         <image name="paper-map-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="2ej-wX-nm1"/>
+        <segue reference="gdP-BZ-vvR"/>
         <segue reference="gRd-f2-aeC"/>
-        <segue reference="bsX-Vc-sN1"/>
-        <segue reference="tKi-bq-jHg"/>
     </inferredMetricsTieBreakers>
 </document>
