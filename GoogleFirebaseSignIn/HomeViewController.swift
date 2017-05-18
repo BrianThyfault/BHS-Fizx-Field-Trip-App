@@ -11,6 +11,7 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
     var page1Array: [String] = [""]
     var page2Array: [String] = [""]
     var page3Array: [String] = [""]
@@ -23,6 +24,14 @@ class HomeViewController: UIViewController {
     func getAllPages() -> ([String], [String], [String], [String])
     {
         return (page1Array, page2Array, page3Array, page4Array)
+    }
+    @IBAction func signOutButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }

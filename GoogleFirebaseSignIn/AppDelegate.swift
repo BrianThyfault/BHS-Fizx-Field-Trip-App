@@ -55,26 +55,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //    func shared() -> AppDelegate {
 //        return UIApplication.shared.delegate as! AppDelegate
 //    }
-
-
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor GIDUser: GIDGoogleUser!, withError error: Error?) {
         if let err = error {
             print("Failed to sign in", err)
                     }
-        guard let authentication = user.authentication else {
+        if(GIDSignIn.sharedInstance().hasAuthInKeychain() == false)
+        {
+            print("User exited Safari View")
+            return
+        }
+        guard let authentication = GIDUser.authentication else {
             return
             //ViewController.init().notCorrectDomain()
         }
+        
         let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
     
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
             if let err = error {
                 print("Failed to sign in", err)
             }
-                print("User Signed In")
             
+            print("\(GIDUser)")
+            if(GIDUser?.hostedDomain == "bsd220.org" || GIDUser?.hostedDomain == "barrington220.org")
+            {
                 self.databaseRef = FIRDatabase.database().reference()
                 self.databaseRef.child("user_profiles").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+                    print("User Signed In")
                     let snapshot = snapshot.value as? NSDictionary
                     self.displayName = (user?.displayName)!
                     self.uid = (user?.uid)!
@@ -87,8 +95,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     self.userSignedIn = user
                     self.window?.rootViewController?.performSegue(withIdentifier: "home", sender: nil)
                     
-                })
+                    })
+                }
+            else
+            {
+                print("Access Denied")
+                GIDSignIn.sharedInstance().signOut()
+                let alert = UIAlertController(title: "Sign in with 'BSD220' Google account", message: "This app is only for Barrington High School students, not the general public", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alert.addAction(okAction)
+                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
+            
+        }
+            
     }
     
     func createDatabase()

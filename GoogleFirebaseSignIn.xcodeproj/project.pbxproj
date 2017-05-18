@@ -12,6 +12,9 @@
 		3F0B93151EC5E34600E6A416 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B93141EC5E34600E6A416 /* Page3ViewController.swift */; };
 		3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */; };
 		3F0B93191ECA00AC00E6A416 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B93181ECA00AC00E6A416 /* PageVC.swift */; };
+		3F69BCF81ECDF13A00DFDB64 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */; };
+		3F69BCFA1ECDF14900DFDB64 /* Page6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */; };
+		3F69BCFC1ECDF15700DFDB64 /* Page7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */; };
 		3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F82101EB7B77B0029E734 /* UserData.swift */; };
 		3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F832A671ECB331B000DEAF2 /* HomeViewController.swift */; };
 		3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DC61E9E789300C28548 /* AppDelegate.swift */; };
@@ -34,6 +37,9 @@
 		3F0B93141EC5E34600E6A416 /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
 		3F0B93181ECA00AC00E6A416 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
+		3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page6ViewController.swift; sourceTree = "<group>"; };
+		3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page7ViewController.swift; sourceTree = "<group>"; };
 		3F7F82101EB7B77B0029E734 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3F832A671ECB331B000DEAF2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FD89DC31E9E789300C28548 /* GoogleFirebaseSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleFirebaseSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,13 +97,16 @@
 				3F7F82101EB7B77B0029E734 /* UserData.swift */,
 				3FD89DC81E9E789300C28548 /* ViewController.swift */,
 				3FD89DCA1E9E789300C28548 /* Main.storyboard */,
+				3F832A671ECB331B000DEAF2 /* HomeViewController.swift */,
 				3FDE680F1ECB52C500A81DEE /* MapViewController.swift */,
 				3F0B93101EC4BC7900E6A416 /* Page1ViewController.swift */,
 				3F0B93121EC5E33A00E6A416 /* Page2ViewController.swift */,
 				3F0B93141EC5E34600E6A416 /* Page3ViewController.swift */,
 				3F0B93161EC5E34F00E6A416 /* Page4ViewController.swift */,
+				3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */,
+				3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */,
+				3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */,
 				3FD89DE01EB396A600C28548 /* TestQViewController.swift */,
-				3F832A671ECB331B000DEAF2 /* HomeViewController.swift */,
 				3F0B93181ECA00AC00E6A416 /* PageVC.swift */,
 				3FD89DCD1E9E789300C28548 /* Assets.xcassets */,
 				3FD89DCF1E9E789300C28548 /* LaunchScreen.storyboard */,
@@ -260,12 +269,15 @@
 				3FDE68101ECB52C500A81DEE /* MapViewController.swift in Sources */,
 				3FD89DC91E9E789300C28548 /* ViewController.swift in Sources */,
 				3F0B93191ECA00AC00E6A416 /* PageVC.swift in Sources */,
+				3F69BCFC1ECDF15700DFDB64 /* Page7ViewController.swift in Sources */,
 				3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */,
 				3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */,
+				3F69BCF81ECDF13A00DFDB64 /* Page5ViewController.swift in Sources */,
 				3F0B93151EC5E34600E6A416 /* Page3ViewController.swift in Sources */,
 				3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */,
 				3F0B93111EC4BC7900E6A416 /* Page1ViewController.swift in Sources */,
 				3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */,
+				3F69BCFA1ECDF14900DFDB64 /* Page6ViewController.swift in Sources */,
 				3FD89DE11EB396A600C28548 /* TestQViewController.swift in Sources */,
 				3F0B93131EC5E33A00E6A416 /* Page2ViewController.swift in Sources */,
 			);
