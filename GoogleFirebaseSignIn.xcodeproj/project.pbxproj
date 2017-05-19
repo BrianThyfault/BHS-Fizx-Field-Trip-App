@@ -15,6 +15,7 @@
 		3F69BCF81ECDF13A00DFDB64 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */; };
 		3F69BCFA1ECDF14900DFDB64 /* Page6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */; };
 		3F69BCFC1ECDF15700DFDB64 /* Page7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */; };
+		3F69BCFE1ECE0E6900DFDB64 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCFD1ECE0E6900DFDB64 /* Data.swift */; };
 		3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F82101EB7B77B0029E734 /* UserData.swift */; };
 		3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F832A671ECB331B000DEAF2 /* HomeViewController.swift */; };
 		3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DC61E9E789300C28548 /* AppDelegate.swift */; };
@@ -24,7 +25,6 @@
 		3FD89DD11E9E789300C28548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD89DCF1E9E789300C28548 /* LaunchScreen.storyboard */; };
 		3FD89DD91E9FCD8600C28548 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD89DD81E9FCD8600C28548 /* GoogleService-Info.plist */; };
 		3FD89DDF1EA51DA400C28548 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD89DDE1EA51DA400C28548 /* AdSupport.framework */; };
-		3FD89DE11EB396A600C28548 /* TestQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD89DE01EB396A600C28548 /* TestQViewController.swift */; };
 		3FDE68101ECB52C500A81DEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE680F1ECB52C500A81DEE /* MapViewController.swift */; };
 		7C4A37348241956BA802987A /* Pods_GoogleFirebaseSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4144213BFDCE13F23ED4F7 /* Pods_GoogleFirebaseSignIn.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +40,7 @@
 		3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page6ViewController.swift; sourceTree = "<group>"; };
 		3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page7ViewController.swift; sourceTree = "<group>"; };
+		3F69BCFD1ECE0E6900DFDB64 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3F7F82101EB7B77B0029E734 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3F832A671ECB331B000DEAF2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FD89DC31E9E789300C28548 /* GoogleFirebaseSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleFirebaseSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +54,6 @@
 		3FD89DDA1E9FCED300C28548 /* GoogleFirebaseSignIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoogleFirebaseSignIn.entitlements; sourceTree = "<group>"; };
 		3FD89DDB1E9FCF8000C28548 /* GoogleFirebaseSignIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleFirebaseSignIn-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FD89DDE1EA51DA400C28548 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		3FD89DE01EB396A600C28548 /* TestQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestQViewController.swift; sourceTree = "<group>"; };
 		3FDE680F1ECB52C500A81DEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5A30BF6A64519F371A3A9237 /* Pods-GoogleFirebaseSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFirebaseSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFirebaseSignIn/Pods-GoogleFirebaseSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +106,7 @@
 				3F69BCF71ECDF13A00DFDB64 /* Page5ViewController.swift */,
 				3F69BCF91ECDF14900DFDB64 /* Page6ViewController.swift */,
 				3F69BCFB1ECDF15700DFDB64 /* Page7ViewController.swift */,
-				3FD89DE01EB396A600C28548 /* TestQViewController.swift */,
+				3F69BCFD1ECE0E6900DFDB64 /* Data.swift */,
 				3F0B93181ECA00AC00E6A416 /* PageVC.swift */,
 				3FD89DCD1E9E789300C28548 /* Assets.xcassets */,
 				3FD89DCF1E9E789300C28548 /* LaunchScreen.storyboard */,
@@ -273,12 +273,12 @@
 				3F0B93171EC5E34F00E6A416 /* Page4ViewController.swift in Sources */,
 				3FD89DC71E9E789300C28548 /* AppDelegate.swift in Sources */,
 				3F69BCF81ECDF13A00DFDB64 /* Page5ViewController.swift in Sources */,
+				3F69BCFE1ECE0E6900DFDB64 /* Data.swift in Sources */,
 				3F0B93151EC5E34600E6A416 /* Page3ViewController.swift in Sources */,
 				3F832A681ECB331B000DEAF2 /* HomeViewController.swift in Sources */,
 				3F0B93111EC4BC7900E6A416 /* Page1ViewController.swift in Sources */,
 				3F7F82111EB7B77B0029E734 /* UserData.swift in Sources */,
 				3F69BCFA1ECDF14900DFDB64 /* Page6ViewController.swift in Sources */,
-				3FD89DE11EB396A600C28548 /* TestQViewController.swift in Sources */,
 				3F0B93131EC5E33A00E6A416 /* Page2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

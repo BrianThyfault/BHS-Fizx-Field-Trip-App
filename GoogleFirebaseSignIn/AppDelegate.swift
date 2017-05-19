@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var page2Questions:[String] = [] //HomeViewController.init().page2Array
     var page3Questions:[String] = [] //HomeViewController.init().page3Array
     var page4Questions:[String] = [] //HomeViewController.init().page4Array
+    var page5Questions:[String] = []
+    var page6Questions:[String] = []
+    var page7Questions:[String] = []
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -106,9 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 alert.addAction(okAction)
                 UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
             }
-            
         }
-            
     }
     
     func createDatabase()
@@ -122,40 +123,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         self.databaseRef.updateChildValues(makeName)
     }
 
-    func updateDatabase(uid: String, displayName: String, page1: [String], page2: [String], page3: [String], page4: [String])
+    func updateDatabase(uid: String, displayName: String, page1: [String], page2: [String], page3: [String], page4: [String], page5: [String], page6: [String], page7: [String])
     {
-        print("Updating questions for Page 1")
+        print("Updating questions")
+        
         var page1Answers: [String:String] = [:]
         for i in 0..<page1.count {
             page1Answers["Question " + "\(i + 1)"] = page1[i]
         }
         let page1Update = ["user_profiles/" + (self.uid) + "/Page1": page1Answers]
-        
-        print("Updating questions for Page 2")
+
         var page2Answers: [String:String] = [:]
         for i in 0..<page2.count {
             page2Answers["Question " + "\(i + 1)"] = page2[i]
         }
         let page2Update = ["user_profiles/" + (self.uid) + "/Page2": page2Answers]
-        
-        print("Updating questions for Page 3")
+
         var page3Answers: [String:String] = [:]
         for i in 0..<page3.count {
             page3Answers["Question " + "\(i + 1)"] = page3[i]
         }
         let page3Update = ["user_profiles/" + (self.uid) + "/Page3": page3Answers]
-        
-        print("Updating questions for Page 4")
+
         var page4Answers: [String:String] = [:]
         for i in 0..<page4.count {
             page4Answers["Question " + "\(i + 1)"] = page4[i]
         }
         let page4Update = ["user_profiles/" + (self.uid) + "/Page4": page4Answers]
+
+        var page5Answers: [String:String] = [:]
+        for i in 0..<page5.count {
+            page5Answers["Question " + "\(i + 1)"] = page5[i]
+        }
+        let page5Update = ["user_profiles/" + (self.uid) + "/Page5": page5Answers]
+
+        var page6Answers: [String:String] = [:]
+        for i in 0..<page6.count {
+            page6Answers["Question " + "\(i + 1)"] = page6[i]
+        }
+        let page6Update = ["user_profiles/" + (self.uid) + "/Page6": page6Answers]
+        
+        var page7Answers: [String:String] = [:]
+        for i in 0..<page7.count {
+            page7Answers["Question " + "\(i + 1)"] = page7[i]
+        }
+        let page7Update = ["user_profiles/" + (self.uid) + "/Page7": page7Answers]
         
         self.databaseRef.updateChildValues(page1Update)
         self.databaseRef.updateChildValues(page2Update)
         self.databaseRef.updateChildValues(page3Update)
         self.databaseRef.updateChildValues(page4Update)
+        self.databaseRef.updateChildValues(page5Update)
+        self.databaseRef.updateChildValues(page6Update)
+        self.databaseRef.updateChildValues(page7Update)
     }
     
     func updateDatabaseForPage1(uid: String, displayName: String, page1: [String])
