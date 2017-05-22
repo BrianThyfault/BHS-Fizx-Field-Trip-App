@@ -20,6 +20,7 @@ class Page4ViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var integer = 0
     var page4Array: [String] = []
+    var alert:UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,16 @@ class Page4ViewController: UIViewController {
         page4Array = [Question1TextField.text!, Question2TextField.text!, Question3TextField.text!, Question4TextField.text!, Question5TextField.text!]
         Data.shared.page4Array = page4Array
         print("Page Flipped")
+    }
+    
+    func showAlert() {
+        self.alert = UIAlertController(title: "Answers saved on all pages!", message: nil, preferredStyle: .alert)
+        self.present(self.alert, animated: true, completion: nil)
+        Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(dismissAlert), userInfo: nil, repeats: false)
+    }
+    
+    func dismissAlert(){
+        self.alert.dismiss(animated: true, completion: nil)
     }
     
     func pullAnswers()
@@ -53,6 +64,7 @@ class Page4ViewController: UIViewController {
         self.page4Array = [Question1TextField.text!, Question2TextField.text!, Question3TextField.text!, Question4TextField.text!, Question5TextField.text!]
         Data.shared.page4Array = page4Array
         Data.shared.submitAnswers()
+        showAlert()
     }
 
 

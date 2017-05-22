@@ -11,7 +11,14 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var welcomeLabel: UILabel!
+
+    @IBOutlet weak var welcomeLabel: UITextView!
+    @IBOutlet weak var topRightButton: UIButton!
+    @IBOutlet weak var topLeftButton: UIButton!
+    @IBOutlet weak var bottomRightButton: UIButton!
+    @IBOutlet weak var bottomLeftButton: UIButton!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var page1Array: [String] = []
     var page2Array: [String] = []
     var page3Array: [String] = []
@@ -23,17 +30,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    func getAllPages() -> ([String], [String], [String], [String], [String], [String], [String])
-    {
-        return (page1Array, page2Array, page3Array, page4Array, page5Array, page6Array, page7Array)
-    }
-    
-    func printArrays()
-    {
-        print(page1Array)
+        topRightButton.setImage(UIImage(named:"Info"), for: .normal)
+        topRightButton.imageView?.contentMode = .scaleAspectFit
+        topLeftButton.imageView?.contentMode = .scaleAspectFit
+        bottomRightButton.imageView?.contentMode = .scaleAspectFit
+        bottomLeftButton.imageView?.contentMode = .scaleAspectFit
+        welcomeLabel.text = "Welcome " + appDelegate.userSignedIn.displayName! + "!"
     }
     
     @IBAction func signOutButton(_ sender: Any) {

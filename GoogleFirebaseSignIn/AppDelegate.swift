@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print("Failed to sign in", err)
             }
             
-            print("\(GIDUser)")
+
             if(GIDUser?.hostedDomain == "bsd220.org" || GIDUser?.hostedDomain == "barrington220.org")
             {
                 self.databaseRef = FIRDatabase.database().reference()
@@ -177,47 +177,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         self.databaseRef.updateChildValues(page6Update)
         self.databaseRef.updateChildValues(page7Update)
     }
-    
-    func updateDatabaseForPage1(uid: String, displayName: String, page1: [String])
-    {
-        print("Updating questions for Page 1")
-        var page1Answers: [String:String] = [:]
-        for i in 0..<page1.count {
-            page1Answers["Question " + "\(i + 1)"] = page1[i]
-        }
-        let page1Update = ["user_profiles/" + (self.uid) + "/Page1": page1Answers]
-        self.databaseRef.updateChildValues(page1Update)
-    }
-    func updateDatabaseForPage2(uid: String, displayName: String, page2: [String])
-    {
-        print("Updating questions for Page 2")
-        var page2Answers: [String:String] = [:]
-        for i in 0..<page2.count {
-            page2Answers["Question " + "\(i + 1)"] = page2[i]
-        }
-        let page2Update = ["user_profiles/" + (self.uid) + "/Page2": page2Answers]
-        self.databaseRef.updateChildValues(page2Update)
-    }
-    func updateDatabaseForPage3(uid: String, displayName: String, page3: [String])
-    {
-        print("Updating questions for Page 3")
-        var page3Answers: [String:String] = [:]
-        for i in 0..<page3.count {
-            page3Answers["Question " + "\(i + 1)"] = page3[i]
-        }
-        let page3Update = ["user_profiles/" + (self.uid) + "/Page3": page3Answers]
-        self.databaseRef.updateChildValues(page3Update)
-    }
-    func updateDatabaseForPage4(uid: String, displayName: String, page4: [String])
-    {
-        print("Updating questions for Page 4")
-        var page4Answers: [String:String] = [:]
-        for i in 0..<page4.count {
-            page4Answers["Question " + "\(i + 1)"] = page4[i]
-        }
-        let page4Update = ["user_profiles/" + (self.uid) + "/Page4": page4Answers]
-        self.databaseRef.updateChildValues(page4Update)
-    }
 
     func getDatabaseInfo()
     {
@@ -227,37 +186,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let page1Snap = snapshot.childSnapshot(forPath: "Page1").value as? NSDictionary
             for i in 0..<snapshot.childSnapshot(forPath: "Page1").childrenCount {
                 let updatedValue = page1Snap?["Question " + "\(i + 1)"] as? String ?? ""
-                print(updatedValue)
-                print(Int(i))
                 self.page1Questions.append(updatedValue)
             }
             
             let page2Snap = snapshot.childSnapshot(forPath: "Page2").value as? NSDictionary
             for i in 0..<snapshot.childSnapshot(forPath: "Page2").childrenCount {
                 let updatedValue = page2Snap?["Question " + "\(i + 1)"] as? String ?? ""
-                print(updatedValue)
                 self.page2Questions.append(updatedValue)
             }
             
             let page3Snap = snapshot.childSnapshot(forPath: "Page3").value as? NSDictionary
             for i in 0..<snapshot.childSnapshot(forPath: "Page3").childrenCount {
                 let updatedValue = page3Snap?["Question " + "\(i + 1)"] as? String ?? ""
-                print(updatedValue)
                 self.page3Questions.append(updatedValue)
             }
             
             let page4Snap = snapshot.childSnapshot(forPath: "Page4").value as? NSDictionary
             for i in 0..<snapshot.childSnapshot(forPath: "Page4").childrenCount {
                 let updatedValue = page4Snap?["Question " + "\(i + 1)"] as? String ?? ""
-                print(updatedValue)
                 self.page4Questions.append(updatedValue)
             }
             
-            print(self.page1Questions)
-            print(self.page2Questions)
-            print(self.page3Questions)
-            print(self.page4Questions)
-
+            let page5Snap = snapshot.childSnapshot(forPath: "Page5").value as? NSDictionary
+            for i in 0..<snapshot.childSnapshot(forPath: "Page5").childrenCount {
+                let updatedValue = page5Snap?["Question " + "\(i + 1)"] as? String ?? ""
+                self.page5Questions.append(updatedValue)
+            }
+            
+            let page6Snap = snapshot.childSnapshot(forPath: "Page6").value as? NSDictionary
+            for i in 0..<snapshot.childSnapshot(forPath: "Page6").childrenCount {
+                let updatedValue = page6Snap?["Question " + "\(i + 1)"] as? String ?? ""
+                self.page6Questions.append(updatedValue)
+            }
+            
+            let page7Snap = snapshot.childSnapshot(forPath: "Page7").value as? NSDictionary
+            for i in 0..<snapshot.childSnapshot(forPath: "Page7").childrenCount {
+                let updatedValue = page7Snap?["Question " + "\(i + 1)"] as? String ?? ""
+                self.page7Questions.append(updatedValue)
+            }
         })
     }
     func applicationWillResignActive(_ application: UIApplication) {
