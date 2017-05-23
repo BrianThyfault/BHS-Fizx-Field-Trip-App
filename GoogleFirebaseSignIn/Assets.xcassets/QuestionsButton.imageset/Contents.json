@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Questions.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "AppIcon-1.png",
+      "filename" : "QuestionsButton.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "AppIcon-2.png",
+      "filename" : "QuestionsButton-1.png",
       "scale" : "3x"
     }
   ],

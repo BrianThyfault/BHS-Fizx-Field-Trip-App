@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G8c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -86,7 +86,7 @@
                                 <rect key="frame" x="14" y="274" width="166" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Info"/>
+                                <state key="normal" image="MapButton"/>
                                 <connections>
                                     <segue destination="Dw9-Q5-mRi" kind="show" id="SCi-XK-GkQ"/>
                                 </connections>
@@ -95,13 +95,13 @@
                                 <rect key="frame" x="14" y="454" width="166" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Info"/>
+                                <state key="normal" image="RulesButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-8h-Hzm">
                                 <rect key="frame" x="194" y="274" width="166" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Info"/>
+                                <state key="normal" image="QuestionsButton"/>
                                 <connections>
                                     <segue destination="Wv0-WI-dMO" kind="show" id="IHR-f8-FAF"/>
                                 </connections>
@@ -110,7 +110,7 @@
                                 <rect key="frame" x="194" y="454" width="166" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Info"/>
+                                <state key="normal" image="InfoButton"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0099468241871529806" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -207,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Demon" translatesAutoresizingMaskIntoConstraints="NO" id="hzE-pG-eLO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background 3" translatesAutoresizingMaskIntoConstraints="NO" id="hzE-pG-eLO">
                                 <rect key="frame" x="-8" y="0.0" width="383" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1225,18 +1225,21 @@
     </scenes>
     <resources>
         <image name="Background 3" width="2331" height="3303"/>
-        <image name="Demon" width="2551" height="3305"/>
         <image name="Homepage" width="2408" height="3453"/>
         <image name="Info" width="25" height="25"/>
+        <image name="InfoButton" width="125" height="125"/>
+        <image name="MapButton" width="125" height="125"/>
+        <image name="QuestionsButton" width="125" height="125"/>
+        <image name="RulesButton" width="125" height="125"/>
         <image name="Six Flags Gurnee Map_Page_2" width="3229" height="3256"/>
         <image name="Six Flags Logo-1" width="3000" height="1500"/>
-        <image name="book-simple-7" width="29" height="30"/>
+        <image name="book-simple-7" width="14" height="15"/>
         <image name="house-7" width="30" height="30"/>
         <image name="paper-map-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bsX-Vc-sN1"/>
-        <segue reference="tKi-bq-jHg"/>
-        <segue reference="IHR-f8-FAF"/>
+        <segue reference="xLH-fM-GH0"/>
+        <segue reference="rCg-lI-wPI"/>
+        <segue reference="aTP-DB-QyU"/>
     </inferredMetricsTieBreakers>
 </document>
