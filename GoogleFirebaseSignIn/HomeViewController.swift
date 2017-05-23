@@ -30,11 +30,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topRightButton.setImage(UIImage(named:"Info"), for: .normal)
-        topRightButton.imageView?.contentMode = .scaleAspectFit
-        topLeftButton.imageView?.contentMode = .scaleAspectFit
-        bottomRightButton.imageView?.contentMode = .scaleAspectFit
-        bottomLeftButton.imageView?.contentMode = .scaleAspectFit
         welcomeLabel.text = "Welcome " + appDelegate.userSignedIn.displayName! + "!"
     }
     
